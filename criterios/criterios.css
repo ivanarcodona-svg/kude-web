@@ -1,0 +1,26 @@
+.cabecera { background: radial-gradient(900px 400px at 90% 0%, rgba(255, 184, 92, 0.22), transparent 60%), linear-gradient(135deg, #4f49c9 0%, #2c2874 100%); color: #fff; }
+.cabecera .interior { max-width: 780px; margin: 0 auto; padding: 34px 20px 70px; }
+.cabecera h1 { color: #fff; }
+.cabecera p { color: rgba(255, 255, 255, 0.86); }
+.cabecera .norma { color: rgba(255, 255, 255, 0.72); }
+.migas { font-size: 14px; color: rgba(255, 255, 255, 0.7); margin-bottom: 16px; }
+.migas a { color: rgba(255, 255, 255, 0.85); }
+main { padding-top: 0; }
+.norma { font-size: 15px; margin: 8px 0 14px; }
+.kude { display: flex; gap: 16px; align-items: center; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 18px 20px; margin: -44px 0 28px; box-shadow: var(--sombra); position: relative; }
+.kude img { width: 56px; height: 56px; border-radius: 23%; flex: none; }
+.kude p { margin: 0; font-size: 15px; }
+.kude .boton { white-space: nowrap; }
+.competencia { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 20px 22px; margin: 18px 0; }
+.competencia h2 { font-size: 18px; margin: 0 0 6px; color: var(--acento); }
+.competencia > p { margin: 0 0 10px; }
+.descriptores { font-size: 13px; color: var(--suave); margin-bottom: 12px; }
+.criterio { display: grid; grid-template-columns: 3.4em 1fr; gap: 8px; padding: 11px 0; border-top: 1px solid var(--borde); }
+.criterio b { color: var(--acento); background: var(--suave-acento); border-radius: 8px; text-align: center; height: fit-content; padding: 1px 0; font-size: 15px; }
+main h2 { font-size: 24px; }
+.lista-enlaces { columns: 2 260px; padding-left: 0; list-style: none; }
+.lista-enlaces li { break-inside: avoid; margin: 0 0 6px; }
+.lista-enlaces a { display: block; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px; padding: 8px 12px; text-decoration: none; font-size: 15px; }
+.lista-enlaces a:hover { border-color: var(--acento); }
+.otros { font-size: 15px; }
+@media (max-width: 560px) { .kude { flex-direction: column; align-items: flex-start; } h1 { font-size: 28px; } .cabecera .interior { padding-bottom: 60px; } }

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ivanarcodona-svg.github.io/kude-web/sitemap.xml

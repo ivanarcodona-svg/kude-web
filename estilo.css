@@ -1,20 +1,117 @@
 /* Sin fuentes ni recursos externos: la web no envía nada a terceros ni usa cookies. */
-:root { --texto: #1d1d1f; --suave: #6e6e73; --fondo: #fbfbfd; --tarjeta: #ffffff; --acento: #4a54c8; --borde: #e5e5ea; }
+:root {
+  --texto: #1d1d1f; --suave: #6e6e73; --fondo: #f7f6fb; --tarjeta: #ffffff; --borde: #e7e5f0;
+  --acento: #4a45bf; --acento-osc: #29266b; --calido: #ffb85c; --suave-acento: #eeecfb;
+  --sombra: 0 18px 50px rgba(41, 38, 107, 0.16);
+}
 @media (prefers-color-scheme: dark) {
-  :root { --texto: #f5f5f7; --suave: #a1a1a6; --fondo: #101012; --tarjeta: #1c1c1e; --acento: #8f97ff; --borde: #2c2c2e; }
+  :root {
+    --texto: #f5f5f7; --suave: #a1a1a6; --fondo: #0f0e17; --tarjeta: #1b1a26; --borde: #2c2a3d;
+    --acento: #8f8aff; --suave-acento: #24223a; --sombra: 0 18px 50px rgba(0, 0, 0, 0.5);
+  }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 760px; margin: 0 auto; padding: 48px 20px 32px; }
-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
-.logo { width: 52px; height: 52px; border-radius: 12px; background: var(--acento); color: #fff; display: grid; place-items: center; font-size: 30px; font-weight: 800; }
-h1 { font-size: 34px; margin: 0; letter-spacing: -0.02em; }
-h2 { font-size: 22px; margin: 36px 0 8px; }
-p, li { color: var(--texto); }
-.lema { color: var(--suave); font-size: 19px; margin: 4px 0 28px; }
-.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 16px; padding: 20px 22px; margin: 16px 0; }
+html { scroll-behavior: smooth; }
+section, h2[id] { scroll-margin-top: 70px; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; }
 a { color: var(--acento); }
+
+/* Páginas de texto (privacidad y criterios). */
+main { max-width: 780px; margin: 0 auto; padding: 32px 20px 40px; }
+header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.logo { width: 52px; height: 52px; border-radius: 23%; display: block; box-shadow: 0 4px 14px rgba(41, 38, 107, 0.25); }
+h1 { font-size: 36px; line-height: 1.15; margin: 0; letter-spacing: -0.025em; }
+h2 { font-size: 24px; line-height: 1.25; margin: 40px 0 10px; letter-spacing: -0.015em; }
+.lema { color: var(--suave); font-size: 19px; margin: 6px 0 28px; }
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 20px; padding: 22px 24px; margin: 18px 0; }
 nav { display: flex; gap: 18px; flex-wrap: wrap; margin: 8px 0 24px; }
 table { width: 100%; border-collapse: collapse; font-size: 15px; }
 th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--borde); }
-footer { max-width: 760px; margin: 0 auto; padding: 24px 20px 48px; color: var(--suave); font-size: 14px; border-top: 1px solid var(--borde); }
+footer { max-width: 1100px; margin: 0 auto; padding: 28px 20px 48px; color: var(--suave); font-size: 14px; border-top: 1px solid var(--borde); }
+footer a { color: var(--suave); }
+
+/* Botones. */
+.boton { display: inline-flex; align-items: center; gap: 10px; background: var(--acento); color: #fff !important; text-decoration: none; font-weight: 600; padding: 12px 20px; border-radius: 14px; transition: transform .15s ease, box-shadow .15s ease; }
+.boton:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(74, 69, 191, 0.35); }
+.boton svg { width: 20px; height: 20px; fill: currentColor; }
+.boton.claro { background: #fff; color: var(--acento-osc) !important; }
+.boton.peque { padding: 8px 14px; font-size: 15px; border-radius: 12px; }
+
+/* Barra superior. */
+.barra { position: sticky; top: 0; z-index: 10; backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); background: color-mix(in srgb, var(--fondo) 78%, transparent); border-bottom: 1px solid var(--borde); }
+.barra .ancho { display: flex; align-items: center; gap: 18px; padding-top: 10px; padding-bottom: 10px; }
+.barra .marca { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 19px; color: var(--texto); text-decoration: none; margin-right: auto; }
+.barra .marca img { width: 34px; height: 34px; border-radius: 23%; }
+.barra a.enlace { color: var(--texto); text-decoration: none; font-size: 15px; white-space: nowrap; }
+.barra a.enlace:hover { color: var(--acento); }
+.ancho { max-width: 1100px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+
+/* Portada. */
+.portada { background: radial-gradient(1200px 500px at 85% 10%, rgba(255, 184, 92, 0.25), transparent 60%), linear-gradient(135deg, #4f49c9 0%, #2c2874 100%); color: #fff; overflow: hidden; }
+.portada .ancho { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: center; padding-top: 72px; padding-bottom: 72px; }
+.portada .icono { width: 84px; height: 84px; border-radius: 23%; box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35); }
+.portada h1 { font-size: 56px; margin: 22px 0 10px; letter-spacing: -0.035em; }
+.portada .entrada { font-size: 21px; line-height: 1.5; color: rgba(255, 255, 255, 0.86); margin: 0 0 28px; max-width: 30em; }
+.portada .entrada strong { color: #fff; }
+.sellos { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding: 0; list-style: none; }
+.sellos li { background: rgba(255, 255, 255, 0.14); border: 1px solid rgba(255, 255, 255, 0.2); padding: 5px 12px; border-radius: 999px; font-size: 14px; color: #fff; }
+.escena { position: relative; min-height: 440px; }
+.escena .ipad { position: absolute; right: 0; top: 0; width: 88%; }
+.escena .iphone { position: absolute; left: 0; bottom: -10px; width: 34%; }
+
+/* Marcos de los dispositivos, solo con CSS. */
+.marco-ipad { border: 12px solid #15141c; border-radius: 30px; box-shadow: var(--sombra), 0 30px 60px rgba(0, 0, 0, 0.35); background: #15141c; display: block; }
+.marco-iphone { border: 8px solid #15141c; border-radius: 40px; box-shadow: var(--sombra), 0 24px 50px rgba(0, 0, 0, 0.35); background: #15141c; display: block; }
+
+/* Bloques de funciones. */
+.funcion .ancho { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; padding-top: 80px; padding-bottom: 40px; }
+.funcion.invertida .texto { order: 2; }
+.funcion .etiqueta { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--acento); background: var(--suave-acento); padding: 4px 10px; border-radius: 999px; }
+.funcion h2 { font-size: 38px; margin: 14px 0 12px; letter-spacing: -0.03em; }
+.funcion p { color: var(--suave); font-size: 18px; margin: 0 0 14px; }
+.funcion ul { padding: 0; margin: 18px 0 0; list-style: none; }
+.funcion li { position: relative; padding-left: 30px; margin: 10px 0; }
+.funcion li::before { content: ""; position: absolute; left: 0; top: 7px; width: 18px; height: 18px; border-radius: 50%; background: var(--acento) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6L20.1 8.4 18.7 7z'/></svg>") center/14px no-repeat; }
+.funcion .imagen { display: flex; justify-content: center; gap: 22px; }
+.funcion .imagen .marco-iphone { width: 46%; max-width: 300px; }
+.funcion .imagen .marco-iphone.alto { margin-top: 40px; }
+
+/* Criterios. */
+.banda { margin: 80px auto 0; }
+.banda .caja { background: linear-gradient(135deg, #4f49c9 0%, #2c2874 100%); color: #fff; border-radius: 28px; padding: 44px; box-shadow: var(--sombra); }
+.banda h2 { font-size: 34px; margin: 0 0 10px; color: #fff; letter-spacing: -0.03em; }
+.banda p { color: rgba(255, 255, 255, 0.85); max-width: 40em; margin: 0 0 22px; }
+.comunidades { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 24px; list-style: none; }
+.comunidades a { display: block; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.22); color: #fff; text-decoration: none; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
+.comunidades a:hover { background: rgba(255, 255, 255, 0.24); }
+
+/* Privacidad en tres tarjetas. */
+.valores .ancho { padding-top: 80px; }
+.valores h2 { text-align: center; font-size: 34px; margin: 0 0 28px; letter-spacing: -0.03em; }
+.tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.tres .tarjeta { margin: 0; }
+.tres h3 { margin: 10px 0 6px; font-size: 19px; }
+.tres p { margin: 0; color: var(--suave); font-size: 16px; }
+.tres .simbolo { width: 44px; height: 44px; border-radius: 12px; background: var(--suave-acento); display: grid; place-items: center; }
+.tres .simbolo svg { width: 24px; height: 24px; fill: var(--acento); }
+
+/* Soporte y aviso legal. */
+.cierre .ancho { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; padding-top: 80px; padding-bottom: 60px; }
+.cierre h2 { margin-top: 0; }
+.cierre .tarjeta { margin: 0; }
+.cierre ul { padding-left: 20px; margin: 8px 0 0; }
+
+@media (max-width: 860px) {
+  .portada .ancho, .funcion .ancho, .cierre .ancho { grid-template-columns: 1fr; }
+  .portada .ancho { padding-top: 48px; padding-bottom: 40px; }
+  .portada h1 { font-size: 44px; }
+  .escena { min-height: 0; aspect-ratio: 1 / 0.82; }
+  .funcion .ancho { gap: 28px; padding-top: 56px; padding-bottom: 8px; }
+  .funcion.invertida .texto { order: 0; }
+  .funcion h2, .banda h2, .valores h2 { font-size: 30px; }
+  .tres { grid-template-columns: 1fr; }
+  .banda .caja { padding: 30px 22px; border-radius: 24px; }
+  .barra a.enlace.secundario { display: none; }
+}
+@media (max-width: 420px) { .barra a.enlace { display: none; } }
