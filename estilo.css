@@ -86,6 +86,17 @@ footer a { color: var(--suave); }
 .comunidades a { display: block; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.22); color: #fff; text-decoration: none; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
 .comunidades a:hover { background: rgba(255, 255, 255, 0.24); }
 
+/* Instagram. */
+.barra a.icono-red { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; }
+.barra a.icono-red svg { width: 22px; height: 22px; fill: currentColor; }
+.redes { margin-top: 80px; }
+.caja-red { display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 28px; padding: 30px 34px; box-shadow: var(--sombra); }
+.icono-ig { width: 72px; height: 72px; border-radius: 22px; display: grid; place-items: center; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%); }
+.icono-ig svg { width: 40px; height: 40px; fill: #fff; }
+.texto-red h2 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.02em; }
+.texto-red p { margin: 0; color: var(--suave); }
+@media (max-width: 860px) { .caja-red { grid-template-columns: 1fr; padding: 26px 22px; } }
+
 /* Privacidad en tres tarjetas. */
 .valores .ancho { padding-top: 80px; }
 .valores h2 { text-align: center; font-size: 34px; margin: 0 0 28px; letter-spacing: -0.03em; }
@@ -115,3 +126,4 @@ footer a { color: var(--suave); }
   .barra a.enlace.secundario { display: none; }
 }
 @media (max-width: 420px) { .barra a.enlace { display: none; } }
+@media (max-width: 420px) { .barra a.enlace.icono-red { display: grid; } }
