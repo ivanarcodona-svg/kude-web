@@ -23,4 +23,21 @@ main h2 { font-size: 24px; }
 .lista-enlaces a { display: block; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 12px; padding: 8px 12px; text-decoration: none; font-size: 15px; }
 .lista-enlaces a:hover { border-color: var(--acento); }
 .otros { font-size: 15px; }
+.puertas { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin: 8px 0 26px; }
+.puerta { display: block; background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 18px; padding: 18px 20px; text-decoration: none; color: inherit; box-shadow: var(--sombra); }
+.puerta:hover { border-color: var(--acento); }
+.puerta strong { display: block; font-size: 19px; color: var(--acento); margin-bottom: 4px; }
+.puerta span { font-size: 15px; color: var(--suave); }
+.aviso-fp, .aviso { background: var(--suave-acento); border-radius: 14px; padding: 12px 16px; font-size: 15px; }
+.buscador { margin: 0 0 14px; }
+.buscador label { display: block; font-weight: 600; margin-bottom: 6px; }
+.buscador input { width: 100%; box-sizing: border-box; font: inherit; font-size: 17px; padding: 12px 14px; border-radius: 14px; border: 1px solid var(--borde); background: var(--tarjeta); color: inherit; }
+.buscador input:focus { outline: 2px solid var(--acento); outline-offset: 1px; }
+.saltos { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
+.saltos a { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 999px; padding: 6px 14px; font-size: 15px; text-decoration: none; }
+.saltos a:hover { border-color: var(--acento); }
+.cuenta { font-size: 15px; font-weight: 500; color: var(--suave); }
+.etiqueta { font-size: 12px; font-weight: 600; color: #b25e00; background: rgba(255, 170, 60, 0.18); border-radius: 999px; padding: 1px 8px; margin-left: 6px; white-space: nowrap; }
+main h3 { font-size: 17px; margin: 18px 0 8px; color: var(--suave); }
+[hidden] { display: none !important; }
 @media (max-width: 560px) { .kude { flex-direction: column; align-items: flex-start; } h1 { font-size: 28px; } .cabecera .interior { padding-bottom: 60px; } }

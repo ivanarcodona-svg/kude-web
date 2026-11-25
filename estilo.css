@@ -85,6 +85,9 @@ footer a { color: var(--suave); }
 .comunidades { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 24px; list-style: none; }
 .comunidades a { display: block; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.22); color: #fff; text-decoration: none; padding: 6px 13px; border-radius: 999px; font-size: 15px; }
 .comunidades a:hover { background: rgba(255, 255, 255, 0.24); }
+.fp-portada { margin: -6px 0 18px; }
+.fp-portada a { display: inline-block; background: rgba(255, 255, 255, 0.16); border: 1px solid rgba(255, 255, 255, 0.3); color: #fff; text-decoration: none; padding: 10px 16px; border-radius: 16px; font-size: 16px; }
+.fp-portada a:hover { background: rgba(255, 255, 255, 0.26); }
 
 /* Instagram. */
 .barra a.icono-red { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; }
@@ -125,5 +128,6 @@ footer a { color: var(--suave); }
   .banda .caja { padding: 30px 22px; border-radius: 24px; }
   .barra a.enlace.secundario { display: none; }
 }
-@media (max-width: 420px) { .barra a.enlace { display: none; } }
-@media (max-width: 420px) { .barra a.enlace.icono-red { display: grid; } }
+/* En el móvil se queda «Criterios»: es la entrada a los criterios de cada etapa y de FP. */
+@media (max-width: 420px) { .barra .ancho { gap: 12px; } .barra a.enlace.secundario { display: none; } }
+@media (max-width: 360px) { .barra a.icono-red { display: none; } }
